@@ -6,12 +6,12 @@ public class SceneLoader : MonoBehaviour
 {
     public void LoadMRI()
     {
-        SceneManager.LoadScene("MRI_Room");
+        SceneManager.LoadScene(2);
     }
 
     public void LoadXRay()
     {
-        SceneManager.LoadScene("XRay_Room");
+        SceneManager.LoadScene(3);
     }
 
     public void FinishMRIAndReturn()
@@ -19,7 +19,7 @@ public class SceneLoader : MonoBehaviour
         if (GameManager.Instance != null)
             GameManager.Instance.SetMRICompleted();
 
-        SceneManager.LoadScene("MainRoom");
+        SceneManager.LoadScene(1);
     }
 
     public void FinishXRayAndReturn()
@@ -27,11 +27,11 @@ public class SceneLoader : MonoBehaviour
         if (GameManager.Instance != null)
             GameManager.Instance.SetXRayCompleted();
 
-        SceneManager.LoadScene("MainRoom");
+        SceneManager.LoadScene(1);
     }
 
     public void LoadMain()
     {
-        SceneManager.LoadScene("MainRoom");
+        SceneManager.LoadScene(1);
     }
 }
